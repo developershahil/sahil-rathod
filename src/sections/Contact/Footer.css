@@ -1,0 +1,131 @@
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.footer__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-10);
+  flex-wrap: wrap;
+}
+
+/* Brand */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 420px;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.footer__logo-initials {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--accent-dim);
+  border: 1px solid var(--border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--accent);
+}
+
+.footer__name {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.footer__role {
+  font-size: var(--text-xs);
+  margin-top: 2px;
+}
+
+.footer__tagline {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Social */
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.footer__social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+}
+
+.footer__social-link:hover {
+  border-color: var(--border-accent);
+  color: var(--accent);
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-2px);
+}
+
+/* Bottom bar */
+.footer__bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-5) 0;
+}
+
+.footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer__copy {
+  font-size: var(--text-xs);
+}
+
+.footer__back-to-top {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast);
+  padding: 0;
+}
+
+.footer__back-to-top:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__bottom-inner {
+    justify-content: center;
+    text-align: center;
+  }
+}
