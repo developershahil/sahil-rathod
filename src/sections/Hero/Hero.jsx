@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Button from '../../components/Button/Button';
+import ResumePreview from '../../components/ResumePreview/ResumePreview';
 import useMousePosition from '../../hooks/useMousePosition';
 import { SITE_META, SOCIAL_LINKS } from '../../utils/constants';
 import './Hero.css';
@@ -25,6 +26,7 @@ const Hero = () => {
   const mouse = useMousePosition();
   const [visibleLines, setVisibleLines] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const headingRef = useRef(null);
 
   // Reveal terminal lines one by one
@@ -49,6 +51,11 @@ const Hero = () => {
   const handleViewWork = (e) => {
     e.preventDefault();
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleResumeClick = (e) => {
+    e.preventDefault();
+    setIsResumeOpen(true);
   };
 
   return (
@@ -89,8 +96,8 @@ const Hero = () => {
             </Button>
             <Button
               variant="outline"
+              onClick={handleResumeClick}
               href={SITE_META.cvPath}
-              external
               icon={
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -154,6 +161,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <ResumePreview
+        src={SITE_META.cvPath}
+        isOpen={isResumeOpen}
+        onClose={() => setIsResumeOpen(false)}
+      />
 
       {/* Scroll indicator */}
       <div className="hero__scroll-indicator" aria-hidden="true">
