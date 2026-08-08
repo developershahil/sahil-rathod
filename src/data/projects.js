@@ -12,7 +12,7 @@ const projects = [
     technologies: ["React", "JavaScript", "HTML", "CSS"],
     github: "https://github.com/developershahil/restrobopos",
     live: null,
-    image: "/images/restrobopos.png",
+    image: `${import.meta.env.BASE_URL}images/restrobopos.png`,
     featured: true,
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Docker"],
     github: "https://github.com/developershahil/hotel-review",
     live: null,
-    image: "/images/hotel-review.png",
+    image: `${import.meta.env.BASE_URL}images/hotel-review.png`,
     featured: true,
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     technologies: ["JavaScript", "Google Gemini API", "HTML", "CSS"],
     github: "https://github.com/developershahil/ColdReach-Gemini",
     live: null,
-    image: "/images/codereach.png",
+    image: `${import.meta.env.BASE_URL}images/codereach.png`,
     featured: true,
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     ],
     github: "https://github.com/developershahil/financial-dashboard",
     live: null,
-    image: "/images/financial-dashboard.png",
+    image: `${import.meta.env.BASE_URL}images/financial-dashboard.png`,
     featured: false,
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     technologies: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
     github: "https://github.com/developershahil/code-oven",
     live: null,
-    image: "/images/CodeOven.png",
+    image: `${import.meta.env.BASE_URL}images/CodeOven.png`,
     featured: false,
   },
 ];
