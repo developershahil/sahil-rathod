@@ -34,7 +34,7 @@ const projects = [
     technologies: ["JavaScript", "Google Gemini API", "HTML", "CSS"],
     github: "https://github.com/developershahil/ColdReach-Gemini",
     live: null,
-    image: `${import.meta.env.BASE_URL}images/codereach.png`,
+    image: `${import.meta.env.BASE_URL}images/Coldreach.png`,
     featured: true,
   },
   {
